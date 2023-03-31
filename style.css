@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    transition: all .3s linear;
+}
+
+body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
+}
+
+.wrapper {
+    width: 700px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.wrapper header {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ccc;
+    color: rgb(16, 16, 123);
+    text-transform: capitalize;
+}
+
+.wrapper form {
+    margin: 35px 30px;
+}
+
+form .dbl-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.dbl-field .field{
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+
+form .field input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0px 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #345672;
+}
+
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: #ccc;
+}
+
+
+.wrapper form i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #ccc;
+    font-size: 23px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .field input:focus ~ i {
+    color: #345672;
+}
+
+form .message {
+    position: relative;
+}
+
+form .message i {
+    top: 30px;
+    font-size: 20px;
+    font-size: 28px;
+}
+
+form .message textarea:focus ~ i {
+    color: #345672;
+    transition: all .4s linear;
+}
+
+form .message textarea {
+    height: 200px;
+    min-height: 420px;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 500px;
+    padding: 15px 20px 0 50px;
+    resize: none;
+}
+
+form .button-area {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+.button-area button {
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    background: #345672;
+    border-radius: 5px;
+    padding: 6px 15px;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+
+
+.button-area button:hover{
+    background: #377db6;
+}
+
+.button-area span {
+    color: #345672;
+    margin-left: 30px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .wrapper{
+        margin: 2rem 0;
+    }
+    .wrapper header{
+        text-align: center;
+    }
+
+    form .dbl-field{
+        margin-bottom:0px ;
+        flex-direction: column;
+    }
+
+
+    .dbl-field .field {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button-area{
+        display: block;
+    }
+    .button-area button{
+        width: 100%;
+    }
+    .button-area span {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .button-area{
+        display: flex;
+        flex-direction: column;
+    }
+}
